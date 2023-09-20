@@ -1,7 +1,7 @@
 use leptos::*;
 
 #[component]
-pub fn Grade(grade: ReadSignal<f32>,set_grade: WriteSignal<f32>) -> impl IntoView {
+pub fn Grade(grade: ReadSignal<f32>, set_grade: WriteSignal<f32>) -> impl IntoView {
     view! {
         <input type="number"
             style=move || {
