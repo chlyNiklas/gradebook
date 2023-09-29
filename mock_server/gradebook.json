@@ -1,0 +1,35 @@
+{
+  "subject": [
+    {
+      "id": 1,
+      "name": "Math"
+    },
+    {
+      "id": 2,
+      "name": "Chemie"
+    }
+  ],
+  "grade": [
+    {
+      "id": 1,
+      "grade": "4.5",
+      "subjectId": 1
+    },
+    {
+      "id": 2,
+      "grade": "4.5",
+      "subjectId": 2
+    },
+    {
+      "id": 3,
+      "grade": "3.9",
+      "subjectId": 1
+    },
+    {
+      "id": 4,
+      "grade": "6",
+      "subjectId": 2
+    }
+
+  ]
+}
