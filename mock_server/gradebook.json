@@ -12,24 +12,23 @@
   "grade": [
     {
       "id": 1,
-      "grade": "4.5",
+      "grade": 4.5,
       "subjectId": 1
     },
     {
       "id": 2,
-      "grade": "4.5",
+      "grade": 4.5,
       "subjectId": 2
     },
     {
       "id": 3,
-      "grade": "3.9",
+      "grade": 4.5,
       "subjectId": 1
     },
     {
       "id": 4,
-      "grade": "6",
+      "grade": 5.25,
       "subjectId": 2
     }
-
   ]
 }
