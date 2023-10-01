@@ -40,7 +40,6 @@
 <style>
   button {
     display: block;
-    width: 100%;
     background-color:white;
     margin: 1em;
     border: solid 1px;
