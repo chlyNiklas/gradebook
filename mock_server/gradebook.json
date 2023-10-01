@@ -12,7 +12,7 @@
   "grade": [
     {
       "id": 1,
-      "grade": 4.5,
+      "grade": 5.25,
       "subjectId": 1
     },
     {
@@ -27,7 +27,7 @@
     },
     {
       "id": 4,
-      "grade": 5.25,
+      "grade": 5.5,
       "subjectId": 2
     }
   ]

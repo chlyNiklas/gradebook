@@ -1,6 +1,4 @@
 <script>
-  import Fa from "svelte-fa/src/fa.svelte";
-  import { faWrench } from "@fortawesome/free-solid-svg-icons";
   import { BACKEND_BASE_URL } from "$lib/globals.js";
   import Modal from "./modal.svelte";
   export let grade;
@@ -18,11 +16,15 @@
       }), // body data type must match "Content-Type" header
     });
   }
+  $: {
+    console.log(editMode)
+  }
 </script>
 
-<div>
+<button
+  on:click={() => (editMode = true)}
+>
   <p><strong>{grade.subject.name}:</strong> {grade.grade}</p>
-  <button on:click={() => (editMode = true)}><Fa icon={faWrench} /></button>
   <Modal bind:showModal={editMode} on:click={save}
     ><h1>Edit</h1>
     <input
@@ -33,4 +35,21 @@
       bind:value={grade.grade}
     /></Modal
   >
-</div>
+</button>
+
+<style>
+  button {
+    display: block;
+    width: 100%;
+    background-color:white;
+    margin: 1em;
+    border: solid 1px;
+    border-radius: 1em;
+    border-color: black;
+    padding: 1em;
+    box-shadow: 0 0 10px #0003;
+  }
+  button:hover {
+    box-shadow: 0 0 10px #0009;
+  }
+</style>
