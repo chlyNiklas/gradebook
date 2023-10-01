@@ -1,4 +1,6 @@
 <script>
+  import Fa from "svelte-fa/src/fa.svelte";
+  import { faClose } from "@fortawesome/free-solid-svg-icons";
   import { createEventDispatcher } from "svelte";
   export let showModal; // boolean
   const dispatch = createEventDispatcher();
@@ -9,6 +11,7 @@
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
+
 <dialog
   bind:this={dialog}
   on:close={() => {
@@ -19,11 +22,28 @@
 >
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div on:click|stopPropagation>
-    <slot name="header" />
-    <hr />
+    <button autofocus on:click={() => dialog.close()}
+      ><Fa icon={faClose} size="2em" /></button
+    >
     <slot />
-    <hr />
     <!-- svelte-ignore a11y-autofocus -->
-    <button autofocus on:click={() => dialog.close()}>close modal</button>
   </div>
 </dialog>
+
+<style>
+  button {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+
+    padding: 0;
+    border: none;
+    background-color: #f2ece9;
+  }
+  dialog {
+    min-width: 20vw;
+    border: solid 1px #272524;
+    border-radius: 1em;
+    background-color: #f2ece9;
+  }
+</style>

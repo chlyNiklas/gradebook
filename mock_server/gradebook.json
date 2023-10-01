@@ -22,12 +22,12 @@
     },
     {
       "id": 3,
-      "grade": 4.5,
+      "grade": 5.5,
       "subjectId": 1
     },
     {
       "id": 4,
-      "grade": 5.5,
+      "grade": 5.75,
       "subjectId": 2
     }
   ]

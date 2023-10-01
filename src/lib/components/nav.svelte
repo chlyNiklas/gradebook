@@ -75,6 +75,10 @@
     border: none;
     background-color: lightgray;
   }
+  a {
+    text-decoration: none;
+    color: #272524;
+  }
 
   @media (min-width: 800px) {
     .mobile {
