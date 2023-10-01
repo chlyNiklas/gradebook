@@ -17,12 +17,15 @@
     });
   }
   $: {
-    console.log(editMode)
+    console.log(editMode);
   }
 </script>
 
 <button
   on:click={() => (editMode = true)}
+  class:bad={grade.grade < 4}
+  class:enough={grade.grade >= 4 && grade.grade < 5}
+  class:good={grade.grade >= 5}
 >
   <p><strong>{grade.subject.name}:</strong> {grade.grade}</p>
   <Modal bind:showModal={editMode} on:click={save}
@@ -40,15 +43,26 @@
 <style>
   button {
     display: block;
-    background-color:white;
+    background-color: #f2ece9;
     margin: 1em;
     border: solid 1px;
     border-radius: 1em;
-    border-color: black;
+    border-color: #272524;
     padding: 1em;
-    box-shadow: 0 0 10px #0003;
+    box-shadow: 0 0 10px #27252430;
+    transition: 0.1s;
   }
   button:hover {
-    box-shadow: 0 0 10px #0009;
+    box-shadow: 0 0 10px #27252480;
+    transition: 0.1s;
+  }
+  .bad {
+    background-color: #cd9f83;
+  }
+  .enough {
+    background-color: #ebd8a3;
+  }
+  .good {
+    background-color: #95ae91;
   }
 </style>
