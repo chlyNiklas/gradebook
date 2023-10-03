@@ -2,30 +2,7 @@
   import Fa from "svelte-fa/src/fa.svelte";
   import { faGraduationCap, faBars } from "@fortawesome/free-solid-svg-icons";
   import Modal from "./modal.svelte";
-  export let elements = [
-    { name: "Home", href: "/" },
-    { name: "Home", href: "/" },
-    { name: "Home", href: "/" },
-    { name: "Home", href: "/" },
-    { name: "Home", href: "/" },
-    { name: "Home", href: "/" },
-    { name: "Home", href: "/" },
-    { name: "Home", href: "/" },
-    { name: "Home", href: "/" },
-    { name: "Home", href: "/" },
-    { name: "Home", href: "/" },
-    { name: "Home", href: "/" },
-    { name: "Home", href: "/" },
-    { name: "Home", href: "/" },
-    { name: "Home", href: "/" },
-    { name: "Home", href: "/" },
-    { name: "Home", href: "/" },
-    { name: "Home", href: "/" },
-    { name: "Home", href: "/" },
-    { name: "Home", href: "/" },
-    { name: "Home", href: "/" },
-    { name: "Home", href: "/" },
-  ];
+  export let elements = [{ name: "Home", href: "/" }];
   let showMobile = false;
 </script>
 
@@ -39,9 +16,9 @@
     {/each}
   </div>
   <div class="mobile">
-      <button on:click={() => (showMobile = true)}>
-        <Fa icon={faBars} size="2em" />
-      </button>
+    <button on:click={() => (showMobile = true)}>
+      <Fa icon={faBars} size="2em" />
+    </button>
     {#if showMobile}
       <Modal bind:showModal={showMobile}>
         {#each elements as element}
@@ -60,7 +37,7 @@
     justify-content: flex-start;
     align-items: center;
 
-    background-color: lightgray;
+    background-color: #a7a8b9;
     padding: 0 1em 0 1em;
   }
   h1 {
@@ -73,7 +50,7 @@
   .mobile button {
     padding: 0;
     border: none;
-    background-color: lightgray;
+    background-color: #a7a8b9;
   }
   a {
     text-decoration: none;
