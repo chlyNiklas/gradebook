@@ -48,9 +48,13 @@
             on:delete={() => deleteGrade(grade.id)}
           />
         {/each}
-        <button on:click={() => newGrade(subject.id)}>
-          <Fa icon={faPlus} size="2em" />
-        </button>
+        <div style="display: flex;">
+          <div style="flex-grow: 1;" />
+          <button on:click={() => newGrade(subject.id)}>
+            <Fa icon={faPlus} size="2em" />
+          </button>
+          <div style="flex-grow: 1;" />
+        </div>
       </div>
     {/each}
   {/if}
@@ -62,9 +66,6 @@
   .grades {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
   }
 
   button {
@@ -83,5 +84,10 @@
   button:hover {
     box-shadow: 0 0 10px #27252480;
     transition: 0.1s;
+  }
+  .a {
+    flex-grow: 1;
+    background-color: red;
+    padding: 1em;
   }
 </style>

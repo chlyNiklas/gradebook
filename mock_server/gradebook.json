@@ -21,14 +21,9 @@
       "subjectId": 2
     },
     {
-      "grade": 4,
-      "subjectId": 2,
-      "id": 12
-    },
-    {
-      "grade": 4,
-      "subjectId": 1,
-      "id": 13
+      "id": 13,
+      "grade": 5.5,
+      "subjectId": 1
     },
     {
       "grade": 4,
