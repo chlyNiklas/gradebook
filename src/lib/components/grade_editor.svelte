@@ -40,23 +40,26 @@
   <p>fetching grades...</p>
 {:then data}
   {#if data != undefined}
-    {#each data as subject (subject.id)}
-      <div class="grades">
-        {#each subject.grade as grade (grade.id)}
-          <Grade
-            grade={{ ...grade, subject: subject }}
-            on:delete={() => deleteGrade(grade.id)}
-          />
-        {/each}
-        <div style="display: flex;">
-          <div style="flex-grow: 1;" />
-          <button on:click={() => newGrade(subject.id)}>
-            <Fa icon={faPlus} size="2em" />
-          </button>
-          <div style="flex-grow: 1;" />
+    <div class="subjects">
+      {#each data as subject (subject.id)}
+        <div class="grades">
+          <h1>{subject.name}:</h1>
+          {#each subject.grade as grade (grade.id)}
+            <Grade
+              grade={{ ...grade, subject: subject }}
+              on:delete={() => deleteGrade(grade.id)}
+            />
+          {/each}
+          <div style="display: flex;">
+            <div style="flex-grow: 1;" />
+            <button on:click={() => newGrade(subject.id)}>
+              <Fa icon={faPlus} size="2em" />
+            </button>
+            <div style="flex-grow: 1;" />
+          </div>
         </div>
-      </div>
-    {/each}
+      {/each}
+    </div>
   {/if}
 {:catch error}
   <p>{error.message}</p>
@@ -85,9 +88,23 @@
     box-shadow: 0 0 10px #27252480;
     transition: 0.1s;
   }
-  .a {
-    flex-grow: 1;
-    background-color: red;
-    padding: 1em;
+  .subjects {
+    display: grid;
+    gap: 1em;
+  }
+  @media only screen and (max-width: 900px) {
+    .subjects {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  @media only screen and (min-width: 900px) and (max-width: 1200px) {
+    .subjects {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .subjects {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 </style>

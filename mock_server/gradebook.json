@@ -7,6 +7,14 @@
     {
       "id": 2,
       "name": "Chemie"
+    },
+    {
+      "id": 3,
+      "name": "Wirtschaft & Recht"
+    },
+    {
+      "id": 4,
+      "name": "Deutsch"
     }
   ],
   "grade": [
@@ -21,14 +29,34 @@
       "subjectId": 2
     },
     {
-      "id": 13,
-      "grade": 5.5,
-      "subjectId": 1
+      "grade": 4,
+      "subjectId": 2,
+      "id": 17
+    },
+    {
+      "grade": 4,
+      "subjectId": 2,
+      "id": 18
     },
     {
       "grade": 4,
       "subjectId": 1,
-      "id": 14
+      "id": 19
+    },
+    {
+      "grade": 4,
+      "subjectId": 1,
+      "id": 20
+    },
+    {
+      "grade": 4,
+      "subjectId": 1,
+      "id": 21
+    },
+    {
+      "grade": 4,
+      "subjectId": 3,
+      "id": 24
     }
   ]
 }
