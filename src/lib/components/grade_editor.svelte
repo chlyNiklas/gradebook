@@ -1,9 +1,8 @@
 <script>
   import { BACKEND_BASE_URL } from "$lib/globals.js";
-  import Fa from "svelte-fa/src/fa.svelte";
-  import { faPlus } from "@fortawesome/free-solid-svg-icons";
   import { onMount } from "svelte";
   import Grade from "./grade.svelte";
+  import PlusButon from "./atoms/plus_buton.svelte";
   /** @type {import('./$types').PageData} */
   let data;
   onMount(async () => {
@@ -52,9 +51,7 @@
           {/each}
           <div style="display: flex;">
             <div style="flex-grow: 1;" />
-            <button on:click={() => newGrade(subject.id)}>
-              <Fa icon={faPlus} size="2em" />
-            </button>
+            <PlusButon on:click={() => newGrade(subject.id)} />
             <div style="flex-grow: 1;" />
           </div>
         </div>
@@ -69,24 +66,6 @@
   .grades {
     display: flex;
     flex-direction: column;
-  }
-
-  button {
-    display: block;
-    background-color: #d7c7c0;
-    max-width: 50%;
-    margin: 1em;
-    border: solid 1px;
-    border-radius: 1em;
-    border-color: #272524;
-    padding: 1em;
-    box-shadow: 0 0 10px #27252430;
-    transition: 0.1s;
-  }
-
-  button:hover {
-    box-shadow: 0 0 10px #27252480;
-    transition: 0.1s;
   }
   .subjects {
     display: grid;

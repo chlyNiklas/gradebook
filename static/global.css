@@ -5,4 +5,23 @@ body {
   color: #272524;
   background-color:  #f2ece9;  
 }
+.container {
+  height: 100%;
+  margin: 1em;
+  padding: 1em;
+
+  border: solid 1px;
+  border-radius: 1em;
+
+  border-color: #272524;
+  background-color: #d7c7c0;
+  box-shadow: 0 0 10px #27252430;
+
+  transition: 0.1s;
+}
+.container:hover {
+  box-shadow: 0 0 10px #27252480;
+
+  transition: 0.1s;
+}
 

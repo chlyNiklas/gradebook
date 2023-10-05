@@ -37,6 +37,7 @@
 </script>
 
 <div
+  class="container"
   class:bad={grade.grade < 4}
   class:enough={grade.grade >= 4 && grade.grade < 5}
   class:good={grade.grade >= 5}
@@ -78,14 +79,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    margin: 1em;
-    border: solid 1px;
-    border-radius: 1em;
-    border-color: #272524;
-    padding: 1em;
-    box-shadow: 0 0 10px #27252430;
-    transition: 0.1s;
     flex-grow: 1;
   }
   div:hover {
